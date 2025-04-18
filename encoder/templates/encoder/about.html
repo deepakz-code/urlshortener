@@ -1,0 +1,48 @@
+<!-- encoder/templates/encoder/about.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>My Website</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to My Website! We are a team of passionate individuals dedicated to providing the best services to our customers. Our goal is to make a positive impact on your experience and offer exceptional value.</p>
+
+            <h3>Our Mission</h3>
+            <p>Our mission is to provide high-quality products and services while maintaining integrity, transparency, and dedication to customer satisfaction.</p>
+
+            <h3>Our Vision</h3>
+            <p>We envision becoming a leading company in our industry by offering innovative solutions and building lasting relationships with our clients.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

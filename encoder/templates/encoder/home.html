@@ -1,0 +1,49 @@
+<!-- encoder/templates/encoder/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <link rel="stylesheet" href="{% static 'encoder/styles.css' %}">  <!-- CSS file link -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>DEEPIFY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="hero">
+            <h2>Welcome to Our Website!</h2>
+            <p>Fastest URL Shortening Service</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="text" name="longurl" id="inputbox" required></input>
+        <button type="submit" class="inputb">Shorten</button>
+
+    </form>
+        </section>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Deepify Tech</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortener</title>
+    <link rel="stylesheet" href="{% static 'encoder/styles.css' %}">
+
+    <style>
+        input{
+        text-align:center;
+        font-size:20px;
+        border-width:0px;
+        }
+        a{
+        color:white;
+        text-decoration:none;
+        un
+        }
+        </style>
+    <script>
+        function copyfun(){
+          var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  document.getElementById("butcopy").innerHTML="Copied...";
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>DEEPIFY</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="hero">
+            <h2>Your Shortened URL</h2>
+
+
+            <input type="text" value= {{ surl }} id="myInput">
+            <button onclick="copyfun()" id="butcol"><div id="butcopy">Copy</div></button><br><br><br>
+            <button ><a href="http://127.0.0.1:8000">Shorten another url</a></button>
+        </section>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Deepify Tech</p>
+    </footer>
+</body>
+</html>
