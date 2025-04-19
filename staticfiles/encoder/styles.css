@@ -72,9 +72,9 @@ main {
 
 .hero button {
     background-color: #ff9800;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
+    border: 2px solid gray;
+    padding: 5px 10px;
+    font-size: 15px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -93,3 +93,11 @@ footer {
     width: 100%;
     bottom: 0;
 }
+input{
+    height:30px;
+    width:200px;
+    border-radius:5px;
+
+
+}
+
