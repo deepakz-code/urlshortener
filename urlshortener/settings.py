@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
 from pathlib import Path
-
+import dj_database_url
 
 from django.conf.global_settings import STATICFILES_DIRS, STATIC_ROOT
 
@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['urlshortener.railway.app']
 
 # Application definition
 
@@ -74,14 +74,7 @@ WSGI_APPLICATION = 'urlshortener.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your-db-name',
-        'USER': 'your-db-user',
-        'PASSWORD': 'your-db-password',
-        'HOST': 'your-db-host',
-        'PORT': '5432',
-    }
+    'default':dj_database_url.config(default='postgresql://postgres:WPaBsRIRKqmXiRtFUsXSTzxgaxchHTog@postgres.railway.internal:5432/railway')
 }
 
 # Password validation
