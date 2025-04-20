@@ -12,8 +12,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
+import pymysql
+pymysql.install_as_MySQLdb()
 
-from django.conf.global_settings import STATICFILES_DIRS, STATIC_ROOT
+from django.conf.global_settings import STATICFILES_DIRS, STATIC_ROOT, SECRET_KEY
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -31,7 +32,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://urlshortenerdeep.up.railway.app',
 ]
 
-ALLOWED_HOSTS = ['urlshortenerdeep.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1','urlshortenerdeep.up.railway.app']
 
 # Application definition
 
@@ -78,11 +79,15 @@ WSGI_APPLICATION = 'urlshortener.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-
-
-
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'UxcBNoQbvtrfYUWSBcESQMQNverXVGcK',
+        'HOST': 'mysql.railway.internal',
+        'PORT': '3306',  # default MySQL port
+    }
 }
 
 # Password validation
