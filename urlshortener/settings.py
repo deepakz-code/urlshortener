@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
-import pymysql
-pymysql.install_as_MySQLdb()
+
 
 from django.conf.global_settings import STATICFILES_DIRS, STATIC_ROOT, SECRET_KEY
 
