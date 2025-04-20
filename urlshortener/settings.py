@@ -27,6 +27,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://urlshortenerdeep.up.railway.app',
+]
+
 ALLOWED_HOSTS = ['urlshortenerdeep.up.railway.app']
 
 # Application definition
