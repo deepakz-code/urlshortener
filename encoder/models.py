@@ -23,8 +23,8 @@ class Url(models.Model):
         return self.shorturls
 
     id=models.AutoField(primary_key=True)
-    longurl=models.CharField()
-    shorturl=models.CharField(blank=True)
+    longurl=models.CharField(max_length=300)
+    shorturl=models.CharField(blank=True,max_length=20)
 
     def save(self, *args, **kwargs):
         if not self.shorturl:
