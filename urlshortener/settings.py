@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'urlshortener.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'UxcBNoQbvtrfYUWSBcESQMQNverXVGcK',
-        'HOST': 'mysql.railway.internal',
-        'PORT': '3306',  # default MySQL port
+        'USER': 'postgres',
+        'PASSWORD': 'WPaBsRIRKqmXiRtFUsXSTzxgaxchHTog',
+        'HOST': 'postgres.railway.internal',
+        'PORT': '5432',
     }
 }
 
