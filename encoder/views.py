@@ -49,5 +49,5 @@ def direct(request,short):
 def aftershort(request,lurl):
     shorturl=Url.objects.filter(longurl=decode_url(lurl)).values()
     shorturl=str(shorturl[0]['shorturl'])
-    shorturl="127.0.0.1:8000/"+shorturl
+    shorturl="urlshortenerdeep.up.railway.app/"+shorturl
     return render(request,'encoder/aftershort.html',{'surl':shorturl})
