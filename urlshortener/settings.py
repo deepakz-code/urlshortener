@@ -26,14 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://urlshortenerdeep.up.railway.app',
-    'https://deepify.tech',
 ]
 
-ALLOWED_HOSTS = ['127.0.0.1','urlshortenerdeep.up.railway.app','deepify.tech']
+ALLOWED_HOSTS = ['127.0.0.1','urlshortenerdeep.up.railway.app']
 
 # Application definition
 
