@@ -15,7 +15,7 @@ import dj_database_url
 
 
 
-from django.conf.global_settings import STATICFILES_DIRS, STATIC_ROOT, SECRET_KEY
+from django.conf.global_settings import STATICFILES_DIRS, STATIC_ROOT, SECRET_KEY, DATABASES
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -89,6 +90,15 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+#DATABASES={
+#        'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / "db.sqlite3",
+#    }
+#}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
